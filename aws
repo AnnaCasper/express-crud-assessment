@@ -1,0 +1,16 @@
+echo $1
+
+mkdir js
+mkdir css
+mkdir img
+cat > index.html << DOCEND
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+</body>
+</ht,l>
+DOCEND
+touch js/app.js
+cat >

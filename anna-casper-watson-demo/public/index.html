@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hello</title>
+	</head>
+	<body>
+		<p>Search Watson</p>
+		<p><input type="text" id="search-watson"></p>
+		<p><button>Search</button></p>
+
+		<script>
+		document.querySelector('button').addEventListener('click', function(){
+			var search = document.getElementById('search-watson').value;
+			var xhr = new XMLHttpRequest;
+			xhr.open('get', 'http://anna-casper-watson-demo.mybluemix.net/fraggle?q=' + search);
+			xhr.addEventListener('load', function(){
+				var p = document.createElement('p');
+				p.innerHTML = xhr.response;
+				document.body.appendChild(p);
+			})
+			xhr.send(null);
+		});
+		</script>
+	</body>
+</html>

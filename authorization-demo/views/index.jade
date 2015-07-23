@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p
+  p Login 
+  form(method="post" action="/login")
+    input(type="email" name="email" placeholder="email")
+    p
+    input(type="password" name="password" placeholder="password")
+    p
+    input(type="submit" value="log in")

@@ -1,0 +1,8 @@
+applications:
+- disk_quota: 1024M
+  host: anna-casper-personality-test
+  name: anna-casper-personality-test
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 256M
