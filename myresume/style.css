@@ -1,0 +1,254 @@
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {font-size: 0.75em;}
+
+body {
+	border: 1px solid white;
+  background-color: white;
+  font-family: Open Sans, serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #000000;
+}
+
+p {
+	font-size: 12px;
+}
+
+h1, h2, h3, h4 {
+  /*margin: 1.414em 0 0.5em;*/
+  font-weight: inherit;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 6.998em;
+  font-family: Quattrocento Sans, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4.827em;
+}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 16px;
+	font-weight: bold;
+	font-family: Quattrocento Sans, sans-serif;
+	color: #92140C;
+	text-align: center;
+}
+
+small, .font_small {font-size: 0.707em;}
+
+header {
+  text-align: center;
+  width: 100%;
+}
+
+.firstName {
+  margin-left: 150px;
+	position: absolute;
+  width: 170px;
+	color: #92140C;
+}
+
+.lastName {
+	margin-top:40px;
+  margin-left: 250px;
+  width: 250px;
+	position: absolute;
+}
+.contact {
+	margin-left: 110px;
+	position: absolute;
+	margin-top: 60px;
+	text-align: right;
+	font-size: 8px;
+}
+.links {
+		margin-left: 325px;
+		position: absolute;
+		margin-top: 8px;
+		text-align: left;
+		width: 300px;
+		font-size: 8px;
+}
+
+.fullstack {
+
+	font-size: 11px;
+}
+
+.fa {
+	color: #92140C;
+}
+
+.projects {
+	margin-top: 140px;
+	width: 49%;
+	height: 460px;
+	float: left;
+}
+.comm {
+	width: 49%;
+	float: left;
+}
+.title {
+	width: 49%;
+	float: left;
+	font-size: 14px;
+	font-family: Quattrocento Sans, sans-serif;
+	margin: 0px;
+}
+.projectTitle {
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	font-family: Quattrocento Sans, sans-serif;
+}
+
+.workExperience {
+	width: 100%;
+	float: left;
+}
+
+.date {
+	text-align: right;
+	width: 49%;
+	float: right;
+	font-family: Quattrocento Sans, sans-serif;
+	font-size: 14px;
+}
+.description {
+	width: 100%;
+	font-style: italic;
+	color: #D3D3D3;
+	font-size: 12px;
+}
+
+.education {
+	width: 100%;
+	float: left;
+}
+
+.tools {
+	padding-left: 5px;
+	width: 49%;
+	float: right;
+	height: 200px;
+	/*border: 1px solid black;*/
+}
+
+.languages {
+	margin-top: 140px;
+	width: 49%;
+	float: right;
+	height: 180px;
+	/*border: 1px solid black;*/
+}
+.tools p {
+	padding-left: 20px
+
+}
+.languages p {
+	padding-left: 20px
+}
+
+.community {
+	text-align: center;
+	width: 49%;
+	float: right;
+	height: 50px;
+	color: #D3D3D3;
+
+}
+
+.lang {
+	width: 45%;
+	float: left;
+	color: #D3D3D3;
+}
+
+.bubbles {
+	width: 35%;
+	float: right;
+}
+
+.fa-circle {
+	color: #D3D3D3;
+}
+.fa-circle-o {
+	color: #D3D3D3;
+}
+
+.grey {
+	color: #D3D3D3;
+	font-size: 11px;
+}
+
+.company {
+	color: #D3D3D3;
+	font-size: 12px;
+}
+
+.project {
+	float: left;
+	width: 100%;
+	font-style: italic;
+	color: #D3D3D3;
+}
+.projectDescription {
+	color: #D3D3D3;
+
+}
+.progress {
+	font-style: italic;
+}

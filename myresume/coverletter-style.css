@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {font-size: 0.75em;}
+
+body {
+	border: 1px solid white;
+  background-color: white;
+  font-family: Open Sans, serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #000000;
+}
+
+p {
+	font-size: 12px;
+}
+
+h1, h2, h3, h4 {
+  /*margin: 1.414em 0 0.5em;*/
+  font-weight: inherit;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 6.998em;
+  font-family: Quattrocento Sans, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4.827em;
+}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 16px;
+	font-weight: bold;
+	font-family: Quattrocento Sans, sans-serif;
+	color: #92140C;
+	text-align: center;
+}
+
+small, .font_small {font-size: 0.707em;}
+
+header {
+  text-align: center;
+  width: 100%;
+	height: 200px;
+}
+main {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+.firstName {
+  margin-left: 150px;
+	position: absolute;
+  width: 170px;
+	color: #92140C;
+}
+
+.lastName {
+	margin-top:40px;
+  margin-left: 250px;
+  width: 250px;
+	position: absolute;
+}
+.contact {
+	margin-left: 110px;
+	position: absolute;
+	margin-top: 60px;
+	text-align: right;
+	font-size: 8px;
+}
+.links {
+		margin-left: 325px;
+		position: absolute;
+		margin-top: 8px;
+		text-align: left;
+		width: 300px;
+		font-size: 8px;
+}
+
+.fullstack {
+	font-size: 11px;
+}
+
+.fa {
+	color: #92140C;
+}
+
+.address, .whom, .job, .p1, .p2, .p3, .closing, .sincerely {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.grey {
+	color: #C0BAD5;
+	font-size: 11px;
+}
