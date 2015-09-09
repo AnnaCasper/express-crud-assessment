@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="redditClone">
+  <head>
+    <title>Reddit Clone</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.8.2/angular-moment.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers.js"></script>
+    <script type="text/javascript" src="/js/directives.js"></script>
+    <script type="text/javascript" src="/js/filters.js"></script>
+    <script type="text/javascript" src="/js/services.js"></script>
+  </head>
+  <body ng-controller="RedditCloneController">
+  </body>
+  <header><span class="logo">CO Adventures</span><a ng-click="showForm()" class="submitPost"><span class="plus">+ </span><span class="submit">Submit Post</span></a>
+    <input type="text" placeholder="Search" ng-model="search" class="search"><a ng-click="showSort()">
+      <div for="sortby" class="sortby">Sort By {{w}} <i class="fa fa-sort-desc"></i></div></a>
+    <div ng-show="showingSortOptions" class="sortContainer">
+      <div ng-click="sortByVotes()" class="sortOption">Votes</div>
+      <div ng-click="sortByDate()" class="sortOption">Date</div>
+      <div ng-click="sortByTitle()" class="sortOption">Title</div>
+    </div>
+  </header>
+  <main>
+    <div ng-show="showingForm" class="form">
+      <form novalidate name="newPost" class="form">
+        <label for="title" class="form">Title</label>
+        <p></p>
+        <input ng-model="post.title" id="title" placeholder="Title" required class="form">
+        <p></p>
+        <label for="author" class="form">Author</label>
+        <p></p>
+        <input ng-model="post.author" id="author" placeholder="Author" required class="form">
+        <p></p>
+        <label for="image" class="form">Image URL </label>
+        <p></p>
+        <input ng-model="post.image" id="image" placeholder="Image URL" required class="form">
+        <p></p>
+        <label for="description" class="form">Description</label>
+        <p></p>
+        <input ng-model="post.description" id="description" placeholder="Description" required class="form">
+        <p></p>
+        <input type="submit" ng-disabled="newPost.$invalid" ng-click="submitForm()" value="Submit Post" class="submit">
+      </form>
+    </div>
+    <div ng-view></div>
+    <div ng-repeat="post in posts | filter: search | orderBy: q" class="postRepeat">
+      <div ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" class="post"><img ng-src="{{post.image}}" class="photo"><span class="postHeader first">
+          <p class="title postHeader first">{{post.title}}  </p>
+          <p class="postHeader"> |  </p>
+          <p class="postHeader"> <a ng-click="upVote(post)" class="upVote"><i class="fa fa-arrow-up">&nbsp;&nbsp;</i></a><a ng-click="downVote(post)" class="downVote"><i class="fa fa-arrow-down"></i></a></p>
+          <p ng-class="{red: post.votes &lt; 0, green: post.votes &gt; 0}" class="postHeader last">{{post.votes}}</p></span>
+        <p class="author">By {{post.author}}</p>
+        <p class="description">{{post.description}}</p><span class="postFooter first">
+          <p class="postFooter first"><i class="fa fa-calendar"></i>  {{post.date | amCalendar}}</p>
+          <p class="postFooter">| </p><a ng-click="showComments()" class="viewComments">
+            <p class="postFooter"> <i class="fa fa-comment"></i>  {{post.comments.length}} </p>
+            <p ng-pluralize count="post.comments.length" when="{'1': ' comment', 'other': ' comments'}" class="postFooter"></p></a>
+          <p class="postFooter">|  </p><a ng-click="showAddComment()" class="addComment">
+            <p class="postFooter"><i class="fa fa-pencil"></i>  Add Comment</p></a></span>
+        <div ng-repeat="comment in post.comments">
+          <div ng-show="showingComments" class="comments">
+            <p class="commentAuthor">{{comment.author}}</p>
+            <p class="text">- {{comment.text}}</p>
+          </div>
+        </div>
+        <div ng-show="showingAddComment" class="addCommentForm">
+          <form novalidate name="newComment" ng-submit="submitComment(post,author, message)" class="commentForm">
+            <label for="commentAuthor" class="commentForm">Author: </label>
+            <input type="text" id="commentAuthor" ng-model="author" placeholder="Username" class="commentForm">
+            <label for="commentAuthor" class="commentForm">Text: </label>
+            <input type="text" id="commentAuthor" ng-model="message" placeholder="Comment Text" class="commentForm last">
+            <input type="submit" value="Submit" class="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</html>

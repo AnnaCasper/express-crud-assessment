@@ -3,6 +3,8 @@ app.controller('MainCtrl', function ($scope) {
 })
 
 app.controller('AddCtrl', function ($scope, $routeParams) {
+  console.log($routeParams);
+  // console.log($location.search());
   $scope.result = Number($routeParams.firstNum) + Number($routeParams.secondNum)
 })
 

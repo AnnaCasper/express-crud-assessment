@@ -18,5 +18,5 @@ app.config(function ($routeProvider) {
       templateUrl: 'partials/result.html',
       controller: 'DivideCtrl'
     })
-    .otherwise({redirectTo: '/'})
+    .otherwise({redirectTo: '/'});
 })
