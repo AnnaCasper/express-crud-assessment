@@ -1,0 +1,14 @@
+<div ng-controller="MessagesCtrl">
+  <h3>Comments</h3>
+  <p></p>
+  <form name="newMessage" ng-submit='addMessage()'>
+    <h4>Post a Comment:</h4>
+    <input type="text" name="messageName" placeholder="Name">
+    <p></p>
+    <input type="text" name="messageContent" placeholder="Content">
+    <p></p>
+    <input type="submit" value="Post Comment">
+  </form>
+  <p></p>
+  <div ng-repeat="data in railsData.data"><p>{{data.name}} : {{data.content}}</p></div>
+</div>

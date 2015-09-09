@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myapp">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -12,7 +12,20 @@
     <script type="text/javascript" src="/js/controllers.js"></script>
     <script type="text/javascript" src="/js/filters.js"></script>
   </head>
-  <body>
-    
+  <body ng-controller="MainCtrl">
+    {{ 3 | kebab}}
+    <p></p>
+    {{"hello-world" | camel}}
+    <p></p>
+    {{"Pig Latin" | pigLatin}}
+    <p></p>
+    {{"My dog Rusty is adorable" | redact: "Rusty"}}
+    <p></p>
+    <h3>Zen Data</h3>
+    {{zenData.data}}
+    <div ng-view></div>
+    <h3>Jack Johnson Tunes</h3>
+    <div ng-repeat='post in appleData.data.results'><p>{{post.trackName}}</p></div>
+
   </body>
 </html>
